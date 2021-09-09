@@ -1,25 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Foods from './Foods';
+import FoodsForm from './FoodsForm'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Foods/>
+      <FoodsForm/>
+
+      
     </div>
   );
+  //these render in the app component
+  //render a data container component and adding new data form component
+  //data container will render the data cards
+  //render an about component
+  //name the components like toycards, toys and toy form
 }
 
 export default App;
