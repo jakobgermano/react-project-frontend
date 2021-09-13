@@ -8,8 +8,8 @@ function Foods() {
     )
 }
 
-
-
+//render foodcards 
+//should handle state as well
 //this is container 
 
 export default Foods;
