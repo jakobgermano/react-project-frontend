@@ -2,19 +2,23 @@
 import './App.css';
 import Foods from './Foods';
 import FoodsForm from './FoodsForm'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 function App() {
 
-  const [foods, setFoods] = useState([])
+ const [foods, setFoods] = useState([])
 
+ useEffect(() => {
   fetch(`http://localhost:3000/Foods`)
   .then(res => res.json())
-  .then(data => console.log(data))
+  .then(foodsData => setFoods(foodsData))
+ }, [])
+
+  
  
   return (
     <div className="App">
-      <Foods/>
+      <Foods foods={foods}/>
       <FoodsForm/>
 
 

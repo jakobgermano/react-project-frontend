@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Foods() {
+function Foods({foods}) {
+    console.log(foods)
     return(
         <div>
-            <h1>here is the food</h1>
+            <h1>my Fav foods</h1>
         </div>
     )
 }
