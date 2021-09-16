@@ -1,11 +1,12 @@
 import React from 'react'
 
-function FoodCard() {
+function FoodCard({food}) {
         
 
     return (
         <div>
-            <h3>card</h3>
+            <h3>{food.name}</h3>
+            <h4>Likes: {food.likes}</h4>
 
         </div>
     )

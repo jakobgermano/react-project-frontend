@@ -1,10 +1,14 @@
 import React from 'react'
+import FoodCard from './FoodCard'
 
 function Foods({foods}) {
-    console.log(foods)
+   
+    const allFoods = foods.map(food => <FoodCard key={food.id} food={food}/>)
+
     return(
         <div>
             <h1>my Fav foods</h1>
+            {allFoods}
         </div>
     )
 }
