@@ -7,19 +7,24 @@ import {useState, useEffect} from 'react'
 function App() {
 
  const [foods, setFoods] = useState([])
-
+ 
  useEffect(() => {
-  fetch(`http://localhost:3000/Foods`)
+  fetch(`http://localhost:3000/foods`)
   .then(res => res.json())
   .then(foodsData => setFoods(foodsData))
  }, [])
+
+ function newFood(newFood) {
+   setFoods([...foods, newFood])
+
+ }
 
   
  
   return (
     <div className="App">
       <Foods foods={foods}/>
-      <FoodsForm/>
+      <FoodsForm newFood={newFood}/>
 
 
     </div>

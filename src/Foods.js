@@ -3,12 +3,18 @@ import FoodCard from './FoodCard'
 
 function Foods({foods}) {
    
-    const allFoods = foods.map(food => <FoodCard key={food.id} food={food}/>)
+    const allFoods = foods.map(food => <FoodCard key={food.id} food={food}  />)
+
+        
+
+   
 
     return(
         <div>
-            <h1>my Fav foods</h1>
+            <h1>My Fav foods</h1>
             {allFoods}
+            
+            
         </div>
     )
 }
