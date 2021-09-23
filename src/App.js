@@ -2,6 +2,9 @@
 import './App.css';
 import Foods from './Foods';
 import FoodsForm from './FoodsForm'
+import Nav from './Nav'
+import Home from './Home'
+import {Route, Switch } from "react-router-dom"
 import {useState, useEffect} from 'react'
 
 function App() {
@@ -23,8 +26,18 @@ function App() {
  
   return (
     <div className="App">
+      <Nav/>
+      <Switch>
+      <Route path="foods">
       <Foods foods={foods}/>
+     </Route>
+     <Route exact path="/foods/new">
       <FoodsForm newFood={newFood}/>
+      </Route>
+      <Route>
+        <Home exact path="/"/>
+      </Route>
+      </Switch>
 
 
     </div>
