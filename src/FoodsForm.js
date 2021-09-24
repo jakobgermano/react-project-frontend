@@ -41,6 +41,6 @@ function FoodsForm({newFood}) {
         </div>
     )
 }
-//should handle state
+
 
 export default FoodsForm

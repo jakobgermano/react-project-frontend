@@ -19,8 +19,6 @@ function Foods({foods}) {
     )
 }
 
-//render foodcards 
-//should handle state as well
-//this is container 
+
 
 export default Foods;
