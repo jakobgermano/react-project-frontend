@@ -22,10 +22,10 @@ function App() {
 
  }
 
-// // function deleteFood(deleteFood) {
-//   // const updatedFood = foods.filter((food) => food.id !== deleteFood.id)
-//   // setFoods(updatedFood)
-// }
+ function deleteFood(deleteFood) {
+ const updatedFood = foods.filter((food) => food.id !== deleteFood.id)
+ setFoods(updatedFood)
+ }
 
 // function updatedFood(updatedFood) {
 //   const updatedFood = food.map((food) => food.id === updatedFood.id ? updatedFood : food)
@@ -37,7 +37,7 @@ function App() {
       <Switch>
       <Route exact path="/foods">
       <Foods foods={foods}
-      // deleteFood={deleteFood}
+       deleteFood={deleteFood}
       // updatedFood={updatedFood}
       />
      </Route>

@@ -1,9 +1,9 @@
 import React from 'react'
 import FoodCard from './FoodCard'
 
-function Foods({foods}) {
+function Foods({foods, deleteFood}) {
    
-    const allFoods = foods.map(food => <FoodCard key={food.id} food={food}  />)
+    const allFoods = foods.map(food => <FoodCard key={food.id} food={food} deleteFood={deleteFood} />)
 
         
 
